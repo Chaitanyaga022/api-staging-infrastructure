@@ -87,7 +87,7 @@ Parameters:
   LambdaS3Key:
     Type: String
     Description: The key of the Lambda code in S3
-    Default: lambda_code/api-staging-lambda-cg.zip
+    Default: lambda_code/lambda_function.zip
 
   EventBridgeRuleName:
     Type: String

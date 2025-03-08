@@ -12,7 +12,7 @@ Resources:
       FunctionName: !Ref LambdaFunctionName # Use a parameter for function name
       Role: !GetAtt LambdaExecutionRole.Arn # Role attached to the Lambda function
       Code:
-        S3Bucket: !Ref BucketName # The bucket where the Lambda code is stored
+        S3Bucket: !Ref Lambga_BucketName # The bucket where the Lambda code is stored
         S3Key: !Ref LambdaS3Key # The key to the Lambda code in S3
       Handler: lambda_function.handler # The handler function for Lambda
       Runtime: python3.8 # You can change this to your runtime
@@ -83,7 +83,12 @@ Parameters:
     Type: String
     Description: The name of the Lambda function
     Default: api-staging-lambda-cg
-
+    
+  Lambga_BucketName:
+    Type: String
+    Description: The S3 bucket name where lambda code is stored
+    Default: api-staging-lambda-cd
+    
   LambdaS3Key:
     Type: String
     Description: The key of the Lambda code in S3
